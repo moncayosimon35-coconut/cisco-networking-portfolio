@@ -1,0 +1,36 @@
+﻿enable
+configure terminal
+hostname colombia
+ipv6 unicast-routing
+
+
+ipv6 dhcp pool LAN3_POOL
+address prefix 2001:beba:cafe:3::/64
+dns-server 2001:b0ba:fea:1::10
+domain-name mywebsite.edu.co
+exit
+
+
+interface gigabitEthernet 0/1
+ipv6 address 2001:beba:cafe:3::1/64
+ipv6 nd managed-config-flag
+ipv6 dhcp server LAN3_POOL
+no shutdown
+exit
+
+
+interface serial 0/0/0
+ipv6 address 2001:b0ba:fea:11::2/64
+no shutdown
+exit
+
+
+ipv6 route 2001:b0ba:fea:1::/64 2001:b0ba:fea:11::1
+ipv6 route 2001:beba:cafe:1::/64 2001:b0ba:fea:11::1
+ipv6 route 2001:beba:cafe:2::/64 2001:b0ba:fea:11::1
+ipv6 route 2001:b0ba:fea:2::/64 2001:b0ba:fea:11::1
+
+
+end
+write
+show ipv6 route

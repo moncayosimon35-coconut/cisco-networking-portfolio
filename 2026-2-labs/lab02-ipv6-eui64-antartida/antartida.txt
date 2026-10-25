@@ -1,0 +1,63 @@
+﻿enable
+configure terminal
+hostname antartida
+interface serial 0/0/0
+clock rate 64000
+no shutdown
+interface serial 0/0/1
+clock rate 64000
+no shutdown
+interface serial 0/1/0
+clock rate 64000
+no shutdown
+end
+write
+
+
+enable
+configure terminal
+ipv6 unicast-routing
+interface gigabitEthernet 0/1
+ipv6 address 2001:b0ba:fea:1::/64 eui-64
+no shutdown
+end
+write
+
+
+show ipv6 interface brief
+
+
+enable
+configure terminal
+interface serial 0/0/0
+ipv6 address 2001:b0ba:fea:10::1/64
+no shutdown
+exit
+interface serial 0/0/1
+ipv6 address 2001:b0ba:fea:11::1/64
+no shutdown
+exit
+interface serial 0/1/0
+ipv6 address 2001:b0ba:fea:12::1/64
+no shutdown
+exit
+end
+write
+
+
+show ipv6 route
+
+
+enable
+configure terminal
+
+
+ipv6 route 2001:beba:cafe:1::/64 2001:b0ba:fea:10::2
+ipv6 route 2001:beba:cafe:2::/64 2001:b0ba:fea:10::2
+ipv6 route 2001:beba:cafe:3::/64 2001:b0ba:fea:11::2
+ipv6 route 2001:b0ba:fea:2::/64 2001:b0ba:fea:12::2
+
+
+end
+show ipv6 route
+write
