@@ -1,53 +1,42 @@
-# 🌐 cisco-networking-portafolio 💾
+# 🌐 Packet Tracer Labs Portfolio (2026-2)
 
-<p align="center">
-  <img src="https://shields.io" />
-  <img src="https://shields.io" />
-  <img src="https://shields.io" />
-</p>
+Welcome to my personal networking portfolio. This repository serves as a centralized hub for my **Cisco Packet Tracer laboratory exercises and network architectures**, specifically organized for the 2026-2 academic term.
 
 ---
 
-## 📟 WELCOME_TO_MY_SPACE //
+## 📂 Repository Structure
 
-Hey there! 👋 Welcome to my networking playground. 
+The project maintains a clean, modular structure where the core labs reside within a dedicated directory. Each individual laboratory folder contains its own internal documentation (`README.md`) detailing specific topologies, addressing schemes, and verification steps.
 
-I am currently studying **Systems Engineering**, but my true passion lies deep within the world of **Telecom and Network Engineering**. This repository is my digital sandbox where I host, test, and showcase all my custom network topologies, labs, and infrastructure designs built using **Cisco Packet Tracer**.
-
-Feel free to browse around, check my CLI configs, and see how I bridge the gap between software and hardware! ⚡
-
----
-
-## 💿 KEY_HIGHLIGHTS_&_SKILLS_DEMONSTRATED //
-
-Here is a breakdown of the networking powers I've been unlocking and configuring inside my labs:
-
-### 🛠️ ROUTING_&_SWITCHING
-*   **Routing Protocols:** Static Routing 📍 / RIPv2 🔄 / OSPF (Single & Multi-area) 🌿 / EIGRP 🧬
-*   **Switching Matrix:** VLANs & Inter-VLAN Routing 🏗️ / STP & RSTP (Loop prevention) 🔄 / EtherChannel (LACP/PAGP) ⛓️
-
-### 🔒 SECURITY_&_HARDENING
-*   **Access Control:** Standard & Extended ACLs (Traffic filtering) 🛑
-*   **Device Securing:** Port Security 🔐 / SSH remote access 🔑 / DHCP Snooping & AAA 🛡️
-
-### 🌐 IP_SERVICES_&_INFRASTRUCTURE
-*   **Core Services:** DHCP Server & Relay 📡 / NAT & PAT (Internet sharing) 🌐
-*   **High Availability:** HSRP (Redundancy & Failover) ⚡
-*   **WAN Technologies:** PPP & Frame Relay encapsulation 📟
+```text
+.
+├── 2026-2-labs/
+│   ├── lab01-ipv6-eui64/            
+│   └── lab02-ipv6-eui64-antartida/  
+├── .gitignore
+└── README.md                        
+```
 
 ---
 
-## 🚀 HOW_TO_LOAD_THE_LABS //
+## 🛠️ Technologies & Protocols
 
-1. Make sure you have **Cisco Packet Tracer** installed on your machine 💻
-2. Clone this repository into your local directory:
-   ```bash
-   git clone https://github.com
-   ```
-3. Boot up any `.pkt` file, jump into the CLI, and run `show running-config` to see the magic! ✨
+- **Simulation Tool:** Cisco Packet Tracer
+- **Network Layer:** IPv6 Addressing, SLAAC (Stateless Address Autoconfiguration), EUI-64 Interface ID generation.
+- **Routing & Switching:** Standard Cisco IOS configuration parameters.
 
 ---
 
-<p align="center">
-  👾 <i>"Ping successful. TTL=128"</i> 👾
-</p>
+## 🚀 Navigation Guide
+
+To explore the technical implementations, configurations, and topology diagrams of a specific scenario, navigate directly into its respective folder inside the main directory:
+
+*   **[Lab 01: IPv6 EUI-64](./2026-2-labs/lab01-ipv6-eui64)** — Fundamentals of mapping MAC addresses to 64-bit IPv6 interface identifiers.
+*   **[Lab 02: IPv6 EUI-64 Antártida](./2026-2-labs/lab02-ipv6-eui64-antartida)** — Extended topology implementing EUI-64 autoconfiguration across localized geographical routing domains.
+
+---
+
+## 📝 Prerequisites
+
+To open, run, and modify the project files (`.pkt`) contained within this repository, ensure you have the following installed:
+*   **Cisco Packet Tracer** (v8.X or higher recommended)
